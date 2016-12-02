@@ -1,0 +1,40 @@
+官网原话：
+This variable was added in MySQL 5.7.2. Before 5.7.2, timestamps in log messages were written using the local system time zone by default, not UTC. If you want the previous log message time zone default, set log_timestamps=SYSTEM.
+在MySQL 5.7.2 新增了 log_timestamps 这个参数，该参数主要是控制 error log、genera log，等等记录日志的显示时间参数。
+在 5.7.2 之后改参数为默认 UTC 这样会导致日志中记录的时间比中国这边的慢，导致查看日志不方便。修改为 SYSTEM 就能解决问题
+
+SHOW GLOBAL VARIABLES LIKE 'log_timestamps';
++----------------+--------+
+| Variable_name  | Value  |
++----------------+--------+
+| log_timestamps | UTC    |
++----------------+--------+
+
+SET GLOBAL log_timestamps = SYSTEM;
+Query OK, 0 rows affected (0.00 sec)
+
+SHOW GLOBAL VARIABLES LIKE 'log_timestamps';
++----------------+--------+
+| Variable_name  | Value  |
++----------------+--------+
+| log_timestamps | SYSTEM |
++----------------+--------+
+1
+2
+
+SHOW GLOBAL VARIABLES LIKE 'log_timestamps';
++----------------+--------+
+| Variable_name  | Value  |
++----------------+--------+
+| log_timestamps | UTC    |
++----------------+--------+
+ 
+SET GLOBAL log_timestamps = SYSTEM;
+Query OK, 0 rows affected (0.00 sec)
+ 
+SHOW GLOBAL VARIABLES LIKE 'log_timestamps';
++----------------+--------+
+| Variable_name  | Value  |
++----------------+--------+
+| log_timestamps | SYSTEM |
++----------------+--------+
