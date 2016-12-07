@@ -1,110 +1,128 @@
 /* ==========================================================================
-   SCSS Variables
+   Variables
    ========================================================================== */
 
 /*
-   Typography variables
+   Typography
    ========================================================================== */
 
-$base-font                   	: Georgia,Times,"Times New Roman",serif;
-$heading-font                	: "Helvetica Neue","Segoe UI",Arial,sans-serif;
-$caption-font                	: $base-font;
-$code-font                   	: monospace;
-$alt-font                    	: $heading-font;
+$doc-font-size              : 16 !default;
 
-$doc-font-size               	: 16;
-$doc-line-height             	: 24;
+/* paragraph indention */
+$paragraph-indent           : false !default; // true, false (default)
+$indent-var                 : 1.3em !default;
 
-$border-radius               	: 3px;
+/* system typefaces */
+$serif                      : Georgia, Times, serif !default;
+$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace                  : Monaco, Consolas, "Lucida Console", monospace !default;
 
-/*
-   Color variables
-   ========================================================================== */
+/* sans serif typefaces */
+$sans-serif-narrow          : $sans-serif !default;
+$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif !default;
 
-$white                        : #fff;
-$black                        : #000;
+/* serif typefaces */
+$georgia                    : Georgia, serif !default;
+$times                      : Times, serif !default;
+$bodoni                     : "Bodoni MT", serif !default;
+$calisto                    : "Calisto MT", serif !default;
+$garamond                   : Garamond, serif !default;
 
-$body-color                  	: #ebebeb;
+$global-font-family         : $sans-serif !default;
+$header-font-family         : $sans-serif !default;
+$caption-font-family        : $serif !default;
 
-$text-color                  	: #313130;
-$caption-color                : mix($white, $text-color, 25%);
-
-$base-color                  	: #343434;
-$comp-color                  	: complement($base-color);
-$border-color                	: #ddd;
-$link-color                  	: #222;
-
-$primary-color               	: $black;
-$success-color               	: #2ecc71;
-$warning-color               	: #f1c40f;
-$danger-color                	: #e74c3c;
-$info-color                  	: #3498db;
-
-$table-border-color          	: $border-color;
-$table-border                	: 1px solid $table-border-color;
-$table-background            	: $body-color;
-$table-header-color          	: lighten($table-background, 10);
-$table-hover-color           	: darken($table-background, 2);
-$table-stripe-color          	: darken($table-background, 4);
-$table-stripe-color-hover    	: darken($table-stripe-color, 5);
-
-$facebook-color					      : #3b5998;
-$flickr-color					        : #ff0084;
-$foursquare-color				      : #0cbadf;
-$google-plus-color				    : #dd4b39;
-$instagram-color				      : #4e433c;
-$linkedin-color					      : #4875b4;
-$pinterest-color				      : #cb2027;
-$rss-color						        : #fa9b39;
-$tumblr-color					        : #2c4762;
-$twitter-color					      : #55acee;
-$vimeo-color					        : #1ab7ea;
-$youtube-color		            : #ff3333;
+/* type scale */
+$type-size-1                : 2.441em !default;  // ~39.056px
+$type-size-2                : 1.953em !default;  // ~31.248px
+$type-size-3                : 1.563em !default;  // ~25.008px
+$type-size-4                : 1.25em !default;   // ~20px
+$type-size-5                : 1em !default;      // ~16px
+$type-size-6                : 0.75em !default;   // ~12px
+$type-size-7                : 0.6875em !default; // ~11px
+$type-size-8                : 0.625em !default;  // ~10px
 
 
 /*
-   Form variables
+   Colors
    ========================================================================== */
 
-$form-border-color           	: $border-color;
-$form-border-color-hover     	: darken($border-color, 10);
-$form-border-color-focus     	: $primary-color;
-$form-border-radius          	: $border-radius;
-$form-box-shadow             	: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
-$form-box-shadow-focus       	: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
-$form-font-family            	: $base-font;
-$form-font-size              	: $doc-font-size;
+$gray                       : #7a8288 !default;
+$dark-gray                  : mix(#000, $gray, 40%) !default;
+$darker-gray                : mix(#000, $gray, 60%) !default;
+$light-gray                 : mix(#fff, $gray, 50%) !default;
+$lighter-gray               : mix(#fff, $gray, 90%) !default;
+
+$body-color                 : #fff !default;
+$background-color           : #fff !default;
+$code-background-color      : #fafafa !default;
+$code-background-color-dark : $light-gray !default;
+$text-color                 : $dark-gray !default;
+$border-color               : $lighter-gray !default;
+
+$primary-color              : #7a8288 !default;
+$success-color              : #62c462 !default;
+$warning-color              : #f89406 !default;
+$danger-color               : #ee5f5b !default;
+$info-color                 : #52adc8 !default;
+
+/* brands */
+$behance-color              : #1769FF !default;
+$dribbble-color             : #ea4c89 !default;
+$facebook-color             : #3b5998 !default;
+$flickr-color               : #ff0084 !default;
+$foursquare-color           : #0072b1 !default;
+$github-color               : #171516 !default;
+$google-plus-color          : #dd4b39 !default;
+$instagram-color            : #517fa4 !default;
+$lastfm-color               : #d51007 !default;
+$linkedin-color             : #007bb6 !default;
+$pinterest-color            : #cb2027 !default;
+$rss-color                  : #fa9b39 !default;
+$soundcloud-color           : #ff3300 !default;
+$stackoverflow-color        : #fe7a15 !default;
+$tumblr-color               : #32506d !default;
+$twitter-color              : #55acee !default;
+$vimeo-color                : #1ab7ea !default;
+$vine-color                 : #00bf8f !default;
+$youtube-color              : #bb0000 !default;
+$xing-color                 : #006567 !default;
+
+
+/* links */
+$link-color                 : $info-color !default;
+$link-color-hover           : mix(#000, $link-color, 25%) !default;
+$link-color-visited         : mix(#fff, $link-color, 25%) !default;
+$masthead-link-color        : $primary-color !default;
+$masthead-link-color-hover  : mix(#000, $primary-color, 25%) !default;
 
 
 /*
-   Sliding menu navigation variables
+   Breakpoints
    ========================================================================== */
 
-$sliding-menu-border-color	 	 : $black;
-$sliding-menu-background 		   : $black;
-$sliding-menu-color 	 		     : $white;
-$sliding-menu-background-hover : $black;
-$sliding-menu-color-hover	 	   : $white;
-$sliding-menu-border   			   : 1px solid $sliding-menu-border-color;
-$button-size		         	     : 30px;
-$transition						         : 0.3s; // increase this to see the transformations in slow-motion
-$sliding-menu-animation        : all 500ms cubic-bezier(.86,.01,.77,.78);
-
-/*
-   Badge variables
-   ========================================================================== */
-
-$badge-background              : $primary-color;
-$badge-dark-color              : $black;
-$badge-danger-color            : $danger-color;
-$badge-info-color              : $info-color;
-$badge-warning-color           : $warning-color;
-$badge-success-color           : $success-color;
-$badge-font-color              : $white;
+$small                      : 600px !default;
+$medium                     : 768px !default;
+$medium-wide                : 900px !default;
+$large                      : 1024px !default;
+$x-large                    : 1280px !default;
 
 
 /*
-   Masthead variables
+   Grid
    ========================================================================== */
 
-$masthead-height: $button-size * 2;
+$right-sidebar-width-narrow : 200px !default;
+$right-sidebar-width        : 300px !default;
+$right-sidebar-width-wide   : 400px !default;
+
+
+/*
+   Other
+   ========================================================================== */
+
+$border-radius              : 4px !default;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125) !default;
+$navicon-width              : 28px !default;
+$navicon-height             : 4px !default;
+$global-transition          : all 0.2s ease-in-out !default;
