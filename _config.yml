@@ -12,7 +12,7 @@ title_separator          : "-"
 name                     : "LD00000"
 description              : "An amazing website."
 url                      : "https://ld00000.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : / # the subpath of your site, e.g. "/blog"
+baseurl                  :  # the subpath of your site, e.g. "/blog"
 repository               : "LD00000/LD00000.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : /asserts/images/wallhaven-250990.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
@@ -238,7 +238,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: compress
+      layout: single
       author_profile: true
       read_time: true
       comments: # true
