@@ -1,25 +1,24 @@
 language: node_js
 node_js:
-    - "6"
-install:
-    npm install
+  - '6'
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_8d610b166c87_key -iv $encrypted_8d610b166c87_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent)
+  - ssh-add ~/.ssh/id_rsa
+  - cp .travis/ssh_config ~/.ssh/config
+  - git config --global user.name 'ld000'
+  - git config --global user.email 'lidong9144@163.com'
+
+install: npm install
 
 script:
+  - hexo clean
   - hexo g
-
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "ld000"
-  - git config user.email "lidong9144@163.com"
-  - git add .
-  - git commit -m "Travis CI"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - hexo d
 
 branches:
   only:
-    - dev
-
-env:
- global:
-   - GH_REF: github.com/ld000/blog.git
+  - dev
