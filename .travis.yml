@@ -5,9 +5,9 @@ install:
     npm install
 
 script:
-  - git config user.name "ld000"
-  - git config user.email "lidong9144@163.com"
   - hexo g
+  - git config --global user.name "ld000"
+  - git config --global user.email "lidong9144@163.com"
   - hexo d
 
 branches:
