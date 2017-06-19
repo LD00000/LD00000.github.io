@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://ld000.space/2016/12/20/xyms/index.html">
 <meta property="og:site_name" content="LD000">
 <meta property="og:description" content="html 4 种常见响应模式">
-<meta property="og:updated_time" content="2017-05-22T08:05:24.439Z">
+<meta property="og:updated_time" content="2017-06-19T08:59:27.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="响应模式">
 <meta name="twitter:description" content="html 4 种常见响应模式">
@@ -81,13 +81,9 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="github" target="_blank" href="https://github.com/ld000" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
 		</nav>
@@ -122,13 +118,9 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="github" target="_blank" href="https://github.com/ld000" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
@@ -180,6 +172,7 @@
 <li>活动布局模型(layout shifter)</li>
 <li>画布溢出模型(off canvas)</li>
 </ul>
+<a id="more"></a>
 <h2 id="掉落列模型"><a href="#掉落列模型" class="headerlink" title="掉落列模型"></a>掉落列模型</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&lt;div class="container"&gt;</div><div class="line">  &lt;div class="box dark_blue"&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="box light_blue"&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="box green"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container &#123;</div><div class="line">  display: flex;</div><div class="line">  flex-wrap: wrap;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.box &#123;</div><div class="line">  width: 100%;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@media screen and (min-width: 450px) &#123;</div><div class="line">  .dark-blue &#123;</div><div class="line">    width: 25%;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  .light-blue &#123;</div><div class="line">    width: 75%;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@media screen and (min-width: 550px) &#123;</div><div class="line">  .dark-blue,</div><div class="line">  .green &#123;</div><div class="line">    width: 25%;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  .light-blue &#123;</div><div class="line">    width: 50%;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="大体流动模型"><a href="#大体流动模型" class="headerlink" title="大体流动模型"></a>大体流动模型</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">&lt;div class="container"&gt;</div><div class="line">  &lt;div class="box dark_blue"&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="box light_blue"&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="box green"&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="box red"&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="box orange"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container &#123;</div><div class="line">  display: flex;</div><div class="line">  flex-wrap: wrap;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.box &#123;</div><div class="line">  width: 100%;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@media screen and (min-width: 450px) &#123;</div><div class="line">  .light-blue,</div><div class="line">  .green &#123;</div><div class="line">    width: 50%;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@media screen and (min-width: 550px) &#123;</div><div class="line">  .dark-blue,</div><div class="line">  .light-blue &#123;</div><div class="line">    width: 50%;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  .red,</div><div class="line">  .green,</div><div class="line">  .orange &#123;</div><div class="line">    width: 33.333333%;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@media screen and (min-width: 700px) &#123;</div><div class="line">  .container &#123;</div><div class="line">    width: 700px;</div><div class="line">    margin-left: auto;</div><div class="line">    margin-right: auto;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="活动布局模型"><a href="#活动布局模型" class="headerlink" title="活动布局模型"></a>活动布局模型</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">&lt;div class="container"&gt;</div><div class="line">  &lt;div class="box dark_blue"&gt;&lt;/div&gt;</div><div class="line">  &lt;div class="container" id="container2"&gt;</div><div class="line">    &lt;div class="box light_blue"&gt;&lt;/div&gt;</div><div class="line">    &lt;div class="box green"&gt;&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;div class="box red"&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container &#123;</div><div class="line">  width: 100%;  /* .ddd */</div><div class="line">  display: flex;</div><div class="line">  flex-wrap: wrap;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.box &#123;</div><div class="line">  width: 100%;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@media screen and (min-width: 500px) &#123;</div><div class="line">  .dark-blue &#123;</div><div class="line">    width: 50%;</div><div class="line">  &#125;</div><div class="line">  #container2 &#123;</div><div class="line">    width: 50%;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@media screen and (min-width: 600px) &#123;</div><div class="line">  .dark-blue &#123;</div><div class="line">    width: 25%;</div><div class="line">    order: 1;</div><div class="line">  &#125;</div><div class="line">  #container2 &#123;</div><div class="line">    width: 50%;</div><div class="line">  &#125;</div><div class="line">  .red &#123;</div><div class="line">    width: 25%;</div><div class="line">    order: -1;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -408,7 +401,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">aspect</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">github-pages</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -416,11 +417,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">aspect</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
               </li>
             
             <div class="clearfix"></div>
