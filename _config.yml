@@ -70,7 +70,7 @@ theme: yilia
 deploy:
   type: git
   repo: git@github.com:ld000/blog.git
-  branch: master1
+  branch: master
 
 jsonContent:
   meta: false
