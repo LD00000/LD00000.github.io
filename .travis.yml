@@ -14,10 +14,9 @@ before_install:
 install: npm install
 
 script:
-  - hexo clean
   - hexo g
   - hexo d
 
 branches:
   only:
-  - dev
+    - dev
