@@ -6,10 +6,20 @@ install:
 
 script:
   - hexo g
-  - git config --global user.name "ld000"
-  - git config --global user.email "lidong9144@163.com"
-  - hexo d
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "ld000"
+  - git config user.email "lidong9144@163.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
 branches:
   only:
     - dev
+
+env:
+ global:
+   - GH_REF: github.com/ld000/blog.git
