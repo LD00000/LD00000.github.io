@@ -1,6 +1,6 @@
 # blog-hexo
 
-[![Build Status](https://travis-ci.org/ld000/blog.svg?branch=master)](https://travis-ci.org/ld000/blog)
+[![Build Status](https://travis-ci.org/ld000/blog.svg?branch=dev)](https://travis-ci.org/ld000/blog)
 
 ```
 hexo g && hexo d
