@@ -5,6 +5,8 @@ install:
     npm install
 
 script:
+  - git config user.name "ld000"
+  - git config user.email "lidong9144@163.com"
   - hexo g
   - hexo d
 
