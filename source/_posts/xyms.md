@@ -10,6 +10,8 @@ description: html 4 种常见响应模式
 - 活动布局模型(layout shifter)
 - 画布溢出模型(off canvas)
 
+<!--more-->
+
 ## 掉落列模型
 
 ```css

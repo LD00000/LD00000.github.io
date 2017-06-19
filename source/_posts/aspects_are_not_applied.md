@@ -1,7 +1,9 @@
 ---
 title: '翻译: Spring AOP 讨论最多的问题 #1 - aspects 没有生效'
 date: 2017-06-12 17:23:37
-tags: aspect
+tags:
+  - aspect
+  - spring
 description: '这篇文章继续讨论从 Spring AOP top problem #2 - java.lang.ClassCastException: $Proxy7 开始的话题。在这个话题里，我想要说明一些现在接触 spring AOP 的 spring 用户(特别是新用户)讨论最多(从我的观点看来)的问题。'
 ---
 
@@ -12,6 +14,8 @@ description: '这篇文章继续讨论从 Spring AOP top problem #2 - java.lang.
 现在我想要聊一聊自身调用('self-calls')，如果你有这方面的经验可以跳过接下来的内容.
 
 请注意 spring 文档也描述了一个同样的问题 - [8.6.1 Understanding AOP proxies](http://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/ch08s06.html#aop-understanding-aop-proxies)。然而，我发现通过 spring 论坛里的很多文章显示人们并没有发现这个问题。所以，我想要把这个问题解释的更明白些 / 用我的语言。
+
+<!--more-->
 
 让我们创建一个说明这个问题的例子。假设我们是 spring 的新用户而且用 spring aop 写了一个非常酷的代码，并且运行的很好。
 
