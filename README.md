@@ -6,7 +6,7 @@
 hexo g && hexo d
 ```
 
-##域名
+## 域名
 
 1、在source文件夹中新建一个CNAME文件（无后缀名），然后用文本编辑器打开，在首行添加你的网站域名，如http://xxxx.com，注意前面没有http://，也没有www，然后使用hexo g && hexo d上传部署。
 
