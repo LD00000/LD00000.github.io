@@ -1,5 +1,5 @@
 language: node_js
-sudo: false
+
 node_js:
   - '6'
 
@@ -15,13 +15,11 @@ before_install:
 install:
   - npm install hexo-cli -g
   - npm install
-  - npm install hexo-generator-feed --save
-  - npm install hexo-generator-sitemap --save
-  - npm install hexo-deployer-git --save
 
 script:
   - hexo clean
   - hexo g
+  - ls -a ./public
   - hexo d
 
 branches:
