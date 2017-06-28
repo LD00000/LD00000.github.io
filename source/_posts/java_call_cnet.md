@@ -2,6 +2,7 @@
 title: java 调用 c# 的方法
 date: 2017-06-28 20:00:00
 tags: java
+description: java 调用 c# 程序的几种方式。
 ---
 
 # Native Java
