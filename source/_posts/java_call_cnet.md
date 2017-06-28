@@ -5,6 +5,10 @@ tags: java
 description: java 调用 c# 程序的几种方式。
 ---
 
+java 调用 c# 程序的几种方式。
+
+<!--more-->
+
 # Native Java
 
 Java不能直接调用C#的dll，这是因为C#和Java一样，也是运行在虚拟机上的语言，所生成的dll并不是和C++一样的native dll，因此没有办法使用JNI进行直接调用。
@@ -49,9 +53,7 @@ import net.sf.jni4net.Bridge;
 缺点：
 
 1. 很长时间没更新了
-
 2. 不支持在 Mono 和 Linux 上运行。原文：[It's not supported at the moment, sorry](http://zamboch.blogspot.cz/2010/04/jni4net-not-yet-on-mono-linux.html)
-
 3. 性能一般
 
 ## javonet
@@ -85,9 +87,7 @@ public void GenerateRandomNumber() throws JavonetException {
 缺点：
 
 1. 过程繁琐。
-
 2. java 和 c# 方都无法感知对方处理进度，无法方便的确定输入输出完成时间。(可以在文本结尾放置一段特殊字符作为处理结束标志)
-
 3. 程序异常不好发现。
 
 # 接口调用
