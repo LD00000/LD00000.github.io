@@ -4,6 +4,7 @@ date: 2017-06-12 17:23:37
 tags:
   - aspect
   - spring
+  - java
 description: '这篇文章继续讨论从 Spring AOP top problem #2 - java.lang.ClassCastException: $Proxy7 开始的话题。在这个话题里，我想要说明一些现在接触 spring AOP 的 spring 用户(特别是新用户)讨论最多(从我的观点看来)的问题。'
 ---
 
