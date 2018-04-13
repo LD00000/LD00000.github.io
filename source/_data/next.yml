@@ -1,0 +1,6 @@
+language: zh-Hans
+disqus:
+  enable: true
+  shortname: ld000-1
+  count: true
+google_analytics: 'UA-89678066-1'

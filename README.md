@@ -13,3 +13,11 @@ hexo g && hexo d
 2、在域名解析提供商，下面以dnspod为例。（1）先添加一个CNAME，主机记录写@，后面记录值写上你的http://xxxx.github.io（2）再添加一个CNAME，主机记录写www，后面记录值也是http://xxxx.github.io这样别人用www和不用www都能访问你的网站（其实www的方式，会先解析成http://xxxx.github.io，然后根据CNAME再变成http://xxx.com，即中间是经过一次转换的）。上面，我们用的是CNAME别名记录，也有人使用A记录，后面的记录值是写github page里面的ip地址，但有时候IP地址会更改，导致最后解析不正确，所以还是推荐用CNAME别名记录要好些，不建议用IP。
 
 3、等十分钟左右，刷新浏览器，用你自己域名访问下试试
+
+##
+
+hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml
+
+hexo server
+
+
