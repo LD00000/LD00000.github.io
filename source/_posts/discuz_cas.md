@@ -11,6 +11,10 @@ description: discuz 接入 cas 实现 SSO 的方法。
 Discuz 3.3
 Cas 5.x 
 
+## 下载 casPHP 插件
+`http://developer.jasig.org/cas-clients/php/`
+我这里用的 1.3.0，下载完后解压拷贝到 discuz 根目录，重命名为 `CAS`。
+
 ## 去除登录输入
 修改 `template/default/member/login_simple.htm`
 * 删除8-29行代码，删除31-32行代码
@@ -38,7 +42,7 @@ Cas 5.x
 
 ![image](/images/discuz-cas-1.png)
 
-## 在CAS文件夹中创建CasClientConfig.php
+## 在`CAS`文件夹中创建 `CasClientConfig.php`
 ```php
 <?php
 define ( 'CAS_SERVER_HOSTNAME', 'cas.com' );
@@ -47,7 +51,7 @@ define ( 'CAS_SERVER_APP_NAME', "cas" );
 ?>
 ```
 
-## 在CAS文件中创建CasClient.php
+## 在`CAS`文件夹中创建 `CasClient.php`
 ```php
 <?php
 require_once DISCUZ_ROOT.'./CAS/CasClientConfig.php'; // 注意
